@@ -6,7 +6,15 @@ export interface wordsType {
 }
 
 export type words = {
-    login: string
+    login: string,
+    welcome: string,
+    msgSignIn: string,
+    email: string,
+    password: string,
+    rememberMe: string,
+    doHaveAccount: string,
+    register: string,
+    msgCopyRight: string
 }
 
 export interface TranslationState {
