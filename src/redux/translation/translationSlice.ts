@@ -3,8 +3,8 @@ import { TranslationState, wordsType } from '../../types/translationTypes';
 import { words } from './translationData';
 
 const initialState: TranslationState = {
-    language: 'ar',
-    words: words['ar'],
+    language: 'en',
+    words: words['en'],
 };
 
 export const translationSlice = createSlice({

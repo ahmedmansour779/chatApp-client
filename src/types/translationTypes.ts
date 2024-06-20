@@ -23,7 +23,7 @@ export interface TranslationState {
 }
 
 type language = {
-    language: "ar" | "en" | "de",
+    language: "ar" | "en",
     words: words
 }
 

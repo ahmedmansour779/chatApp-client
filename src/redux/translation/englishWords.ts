@@ -2,7 +2,7 @@ import { words } from "../../types/translationTypes"
 
 const englishWords: words = {
     login: "Log In",
-    welcome: "Welcome Back !",
+    welcome: "Welcome Back",
     msgSignIn: "Sign in to continue to Doot.",
     email: "Email",
     password: "Password",

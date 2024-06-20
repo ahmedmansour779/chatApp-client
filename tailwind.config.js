@@ -9,7 +9,15 @@ export default {
         secondary: "#495057",
         light: "#ffffff80",
         lightBlack: "#495057bf"
-      }
+      },
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'tablet': '992px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
     },
   },
   plugins: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
