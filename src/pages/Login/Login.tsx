@@ -11,7 +11,7 @@ export default function Login() {
       style={{
         direction: lang == "en" ? "rtl" : "ltr"
       }}
-      className="min-h-[100vh] bg-primary p-4 relative tablet:block flex flex-col gap-4">
+      className="min-h-[100vh] font-cairo bg-primary p-4 relative tablet:block flex flex-col gap-4">
       <SideBarLogin />
       <LoginForm />
     </div>
