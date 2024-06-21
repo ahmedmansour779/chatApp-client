@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import WelcomeTitle from "../../../pages/Login/WelcomeTitle";
 import { RootState } from "../../../types/translationTypes";
 import LoginFormData from "../LoginFormData";
+import WelcomeTitle from "../WelcomeTitle";
 
 export default function LoginForm() {
   const lang = useSelector((state: RootState) => state.translation.language)
