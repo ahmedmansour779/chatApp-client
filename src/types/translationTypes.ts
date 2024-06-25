@@ -14,7 +14,19 @@ export type words = {
     rememberMe: string,
     doHaveAccount: string,
     register: string,
-    msgCopyRight: string
+    msgCopyRight: string,
+    registerAccount: string,
+    msgRegisterAccount: string,
+    personalPicture: string,
+    terms: string,
+    alreadyHaveAccount: string,
+    userName: string,
+    uploadYourPhoto: string,
+    dataIncomplete: string,
+    alreadyUserAccount: string,
+    vialedUserName: string,
+    vialedPassword: string,
+    vialedEmail: string
 }
 
 export interface TranslationState {
