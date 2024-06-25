@@ -4,7 +4,7 @@ import { api } from "../api";
 import { FormDataObject } from "../types/form";
 import { handelLoginProps, responseEmailInterface, responsePasswordInterface } from "../types/requestTypes";
 
-export const handelLogin = async ({ e, msgErrorData, EmailNotCorrect, PasswordNotCorrect }: handelLoginProps) => {
+export const handelLogin = async ({ e, msgErrorData, EmailNotCorrect, PasswordNotCorrect, link }: handelLoginProps) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
@@ -29,6 +29,7 @@ export const handelLogin = async ({ e, msgErrorData, EmailNotCorrect, PasswordNo
                 password: data.password
             })
             toast.success(responsePassword.data.message)
+            link("/chat")
         } catch {
             console.log(PasswordNotCorrect);
         }

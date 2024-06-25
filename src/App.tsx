@@ -1,10 +1,10 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoadingPage from './components/LoadingPage';
-import RegisterPage from './pages/RegisterPage';
+import Chat from './pages/Chat';
 import './style/App.css';
 const Login = lazy(() => import('./pages/Login'));
-// const Register = lazy(() => import('./pages/RegisterPage'));
+const Register = lazy(() => import('./pages/RegisterPage'));
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
         <Suspense fallback={<LoadingPage />}>
           <Routes>
             <Route path='/' element={<Login />} />
-            <Route path='/register' element={<RegisterPage />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/chat' element={<Chat />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

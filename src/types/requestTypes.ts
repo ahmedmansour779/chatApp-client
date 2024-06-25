@@ -5,6 +5,7 @@ export interface handelLoginProps {
     msgErrorData: string;
     EmailNotCorrect: string
     PasswordNotCorrect: string
+    link: NavigateFunction;
 }
 
 export interface responseEmailInterface {
@@ -17,7 +18,6 @@ export interface responsePasswordInterface {
     message: string;
     token: string
 }
-
 
 export interface handelRegisterProps {
     e: React.FormEvent<HTMLFormElement>;
