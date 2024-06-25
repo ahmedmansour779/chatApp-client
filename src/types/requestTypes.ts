@@ -1,3 +1,4 @@
+import { Dispatch, UnknownAction } from "@reduxjs/toolkit";
 import { NavigateFunction } from "react-router-dom";
 
 export interface handelLoginProps {
@@ -6,6 +7,7 @@ export interface handelLoginProps {
     EmailNotCorrect: string
     PasswordNotCorrect: string
     link: NavigateFunction;
+    dispatch: Dispatch<UnknownAction>
 }
 
 export interface responseEmailInterface {

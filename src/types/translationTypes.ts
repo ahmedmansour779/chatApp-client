@@ -1,4 +1,5 @@
 import { ThemeState } from "./colorsType";
+import { UserState } from "./userTypes";
 
 export interface wordsType {
     en: words
@@ -41,8 +42,8 @@ type language = {
     words: words
 }
 
-
 export type RootState = {
     translation: language,
-    theme: ThemeState
+    theme: ThemeState,
+    user: UserState
 }

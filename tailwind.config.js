@@ -8,7 +8,9 @@ export default {
         primary: "#4eac6d",
         secondary: "#495057",
         light: "#ffffff80",
-        lightBlack: "#495057bf"
+        lightBlack: "#495057bf",
+        backGroundSidebar: "#2e2e2e",
+        iconSidebar: "#878a92"
       },
       screens: {
         'sm': '640px',
