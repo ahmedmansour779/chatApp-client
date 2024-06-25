@@ -21,7 +21,9 @@ const englishWords: words = {
     alreadyUserAccount: "This account already exists",
     vialedUserName: "Please enter the correct name",
     vialedPassword: "Please enter the correct Password",
-    vialedEmail: "Please enter the correct email"
+    vialedEmail: "Please enter the correct email",
+    EmailNotCorrect: "Email is incorrect",
+    PasswordNotCorrect: "Password is incorrect",
 }
 
 export default englishWords

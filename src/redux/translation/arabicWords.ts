@@ -21,7 +21,9 @@ const arabicWords: words = {
     alreadyUserAccount: "هذا الحساب موجود بالفعل",
     vialedEmail: "من فضلك قم بكتابه البريد الالكتروني بطريقه صحيحه",
     vialedPassword: "من فضلك قم بكتابه كلمه المرور بطريقه صحيحه",
-    vialedUserName: "من فضلك قم بكتابه الاسم بطريقه صحيحه"
+    vialedUserName: "من فضلك قم بكتابه الاسم بطريقه صحيحه",
+    EmailNotCorrect: "البريد الالكتروني غير صحيح",
+    PasswordNotCorrect: "كلمه المرور غير صحيح"
 }
 
 export default arabicWords

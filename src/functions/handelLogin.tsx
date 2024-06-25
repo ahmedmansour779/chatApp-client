@@ -2,9 +2,9 @@ import axios, { AxiosResponse } from "axios";
 import { toast } from "react-toastify";
 import { api } from "../api";
 import { FormDataObject } from "../types/form";
-import { handelRegisterProps, responseEmailInterface, responsePasswordInterface } from "../types/requestTypes";
+import { handelLoginProps, responseEmailInterface, responsePasswordInterface } from "../types/requestTypes";
 
-export const handelLogin = async ({ e, msgErrorData }: handelRegisterProps) => {
+export const handelLogin = async ({ e, msgErrorData, EmailNotCorrect, PasswordNotCorrect }: handelLoginProps) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
@@ -29,10 +29,10 @@ export const handelLogin = async ({ e, msgErrorData }: handelRegisterProps) => {
                 password: data.password
             })
             toast.success(responsePassword.data.message)
-        } catch (error) {
-            console.log(error);
+        } catch {
+            console.log(PasswordNotCorrect);
         }
-    } catch (error) {
-        toast.error("email not correct")
+    } catch {
+        toast.error(EmailNotCorrect)
     }
 }

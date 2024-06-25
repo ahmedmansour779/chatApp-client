@@ -26,7 +26,9 @@ export type words = {
     alreadyUserAccount: string,
     vialedUserName: string,
     vialedPassword: string,
-    vialedEmail: string
+    vialedEmail: string,
+    EmailNotCorrect: string,
+    PasswordNotCorrect: string
 }
 
 export interface TranslationState {

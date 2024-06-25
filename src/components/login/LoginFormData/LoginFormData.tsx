@@ -10,11 +10,11 @@ import SubmitButton from "../../form/SubmitButton";
 import MsgSubmitButton from "../MsgSubmitButton";
 
 export default function LoginFormData() {
-  const { login, dataIncomplete: msgErrorData } = useSelector((state: RootState) => state.translation.words)
+  const { login, dataIncomplete: msgErrorData, EmailNotCorrect, PasswordNotCorrect } = useSelector((state: RootState) => state.translation.words)
   return (
     <>
       <form
-        onSubmit={(e) => handelLogin({ e, msgErrorData })}
+        onSubmit={(e) => handelLogin({ e, msgErrorData, EmailNotCorrect, PasswordNotCorrect })}
         className="flex flex-col gap-2">
         <EmailInput />
         <PasswordInput />

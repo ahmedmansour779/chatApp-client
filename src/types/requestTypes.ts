@@ -1,6 +1,10 @@
-export interface handelRegisterProps {
+import { NavigateFunction } from "react-router-dom";
+
+export interface handelLoginProps {
     e: React.FormEvent<HTMLFormElement>;
-    msgErrorData: string
+    msgErrorData: string;
+    EmailNotCorrect: string
+    PasswordNotCorrect: string
 }
 
 export interface responseEmailInterface {
@@ -12,4 +16,14 @@ export interface responseEmailInterface {
 export interface responsePasswordInterface {
     message: string;
     token: string
+}
+
+
+export interface handelRegisterProps {
+    e: React.FormEvent<HTMLFormElement>;
+    available: boolean;
+    value: string;
+    msgErrorData: string;
+    alreadyUserAccount: string;
+    link: NavigateFunction;
 }

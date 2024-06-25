@@ -1,16 +1,7 @@
 import axios from "axios";
-import { NavigateFunction } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FormDataObject } from "../types/form";
-
-interface handelRegisterProps {
-    e: React.FormEvent<HTMLFormElement>;
-    available: boolean;
-    value: string;
-    msgErrorData: string;
-    alreadyUserAccount: string;
-    link: NavigateFunction;
-}
+import { handelRegisterProps } from "../types/requestTypes";
 
 export const handelRegister = async ({ available, e, value, msgErrorData, alreadyUserAccount, link }: handelRegisterProps) => {
     e.preventDefault();
