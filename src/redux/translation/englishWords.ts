@@ -26,7 +26,10 @@ const englishWords: words = {
     PasswordNotCorrect: "Password is incorrect",
     chats: "Chats",
     recently: "Recently",
-    searchHere: "Search Here"
+    searchHere: "Search Here",
+    myProfile: "My Profile",
+    light: "Light",
+    dark: "Dark"
 }
 
 export default englishWords

@@ -4,11 +4,14 @@ import SidebarSection from "../../components/chat/SidebarSection";
 import { RootState } from "../../types/translationTypes";
 
 export default function Chat() {
-  const state = useSelector((state: RootState) => state.user.token)
-  console.log(state);
+  const lang = useSelector((state: RootState) => state.translation.language)
 
   return (
-    <div className="grid grid-cols-12">
+    <div
+      style={{
+        direction: lang == "ar" ? "rtl" : "ltr"
+      }}
+      className="grid grid-cols-12">
       <SidebarSection />
       <ChatSection />
     </div>

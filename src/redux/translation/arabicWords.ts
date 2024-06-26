@@ -26,7 +26,10 @@ const arabicWords: words = {
     PasswordNotCorrect: "كلمه المرور غير صحيح",
     chats: "المحادثات",
     recently: "حديثا",
-    searchHere: "أبحث هنا"
+    searchHere: "أبحث هنا",
+    myProfile: "حسابي",
+    light: "فاتح",
+    dark: "مظلم"
 }
 
 export default arabicWords

@@ -1,6 +1,7 @@
 import { IconMessageFilled } from "@tabler/icons-react";
 import { SetStateAction } from "react";
 import { itemSidebarData } from "../../../data/itemsSidebarData";
+import ChangeLanguage from "../../ChangeLanguage";
 import LogoutButton from "../../LogoutButton";
 import SwitchModeButton from "../../SwitchModeButton";
 
@@ -32,6 +33,7 @@ export default function ItemsSidebar({ itemId, setItemId }: ItemsSidebar) {
         </div>
       </div>
       <div className="flex flex-col gap-4">
+        <ChangeLanguage />
         <SwitchModeButton />
         <LogoutButton />
       </div>

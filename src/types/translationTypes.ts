@@ -32,7 +32,10 @@ export type words = {
     PasswordNotCorrect: string,
     chats: string,
     recently: string,
-    searchHere: string
+    searchHere: string,
+    myProfile: string,
+    light: string,
+    dark: string
 }
 
 export interface TranslationState {
