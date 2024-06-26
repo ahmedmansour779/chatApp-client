@@ -1,7 +1,7 @@
 export type colors = {
-    primary: string,
-    seconder: string,
-    third: string,
+    backgroundSidebar: string,
+    textSidebar: string,
+    backgroundSearchSection: string,
 }
 
 export type themeType = {

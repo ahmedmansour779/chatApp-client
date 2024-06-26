@@ -2,13 +2,13 @@ import { themeType } from "../../types/colorsType";
 
 export const colors: themeType = {
     dark: {
-        primary: "test",
-        seconder: "test",
-        third: "test"
+        backgroundSidebar: "#262626",
+        textSidebar: "#ffffff80",
+        backgroundSearchSection: "#2e2e2e"
     },
     light: {
-        primary: "test",
-        seconder: "test",
-        third: "test"
+        backgroundSidebar: "#fff",
+        textSidebar: "#495057",
+        backgroundSearchSection: "#f6f6f9"
     }
 }

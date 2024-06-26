@@ -24,6 +24,9 @@ const englishWords: words = {
     vialedEmail: "Please enter the correct email",
     EmailNotCorrect: "Email is incorrect",
     PasswordNotCorrect: "Password is incorrect",
+    chats: "Chats",
+    recently: "Recently",
+    searchHere: "Search Here"
 }
 
 export default englishWords

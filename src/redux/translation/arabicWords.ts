@@ -23,7 +23,10 @@ const arabicWords: words = {
     vialedPassword: "من فضلك قم بكتابه كلمه المرور بطريقه صحيحه",
     vialedUserName: "من فضلك قم بكتابه الاسم بطريقه صحيحه",
     EmailNotCorrect: "البريد الالكتروني غير صحيح",
-    PasswordNotCorrect: "كلمه المرور غير صحيح"
+    PasswordNotCorrect: "كلمه المرور غير صحيح",
+    chats: "المحادثات",
+    recently: "حديثا",
+    searchHere: "أبحث هنا"
 }
 
 export default arabicWords

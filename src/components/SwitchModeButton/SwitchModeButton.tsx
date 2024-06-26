@@ -8,7 +8,9 @@ export default function SwitchModeButton() {
   const dispatch = useDispatch()
 
   return (
-    <div onClick={() => dispatch(toggleMode())}>
+    <div
+      className="hover:cursor-pointer"
+      onClick={() => dispatch(toggleMode())}>
       {
         mode == "dark" ?
           <IconSun /> :

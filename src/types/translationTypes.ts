@@ -29,7 +29,10 @@ export type words = {
     vialedPassword: string,
     vialedEmail: string,
     EmailNotCorrect: string,
-    PasswordNotCorrect: string
+    PasswordNotCorrect: string,
+    chats: string,
+    recently: string,
+    searchHere: string
 }
 
 export interface TranslationState {
