@@ -29,7 +29,9 @@ const englishWords: words = {
     searchHere: "Search Here",
     myProfile: "My Profile",
     light: "Light",
-    dark: "Dark"
+    dark: "Dark",
+    welcomeDoot: "Welcome to Doot Chat App",
+    msgWelcomeDoot: "You can click on one of the conversations to start a conversation with your friends through Doot conversations"
 }
 
 export default englishWords

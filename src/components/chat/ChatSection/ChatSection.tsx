@@ -1,8 +1,17 @@
+import InitialChatPage from "../InitialChatPage";
 
-export default function ChatSection() {
+interface chatSectionProps {
+  chatId: number
+}
+
+export default function ChatSection({ chatId }: chatSectionProps) {
   return (
     <div className="col-span-8">
-      chat
+      {
+        chatId == 0 ?
+          <InitialChatPage /> :
+          <p>chat</p>
+      }
     </div>
   );
 }

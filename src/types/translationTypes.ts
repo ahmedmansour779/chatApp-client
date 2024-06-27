@@ -35,7 +35,9 @@ export type words = {
     searchHere: string,
     myProfile: string,
     light: string,
-    dark: string
+    dark: string,
+    welcomeDoot: string,
+    msgWelcomeDoot: string
 }
 
 export interface TranslationState {

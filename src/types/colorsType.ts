@@ -2,6 +2,9 @@ export type colors = {
     backgroundSidebar: string,
     textSidebar: string,
     backgroundSearchSection: string,
+    backgroundInitialChatPage: string,
+    textInitialChatPage: string,
+    descriptionInitialChatPage: string,
 }
 
 export type themeType = {

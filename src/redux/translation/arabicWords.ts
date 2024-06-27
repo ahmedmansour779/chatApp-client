@@ -29,7 +29,9 @@ const arabicWords: words = {
     searchHere: "أبحث هنا",
     myProfile: "حسابي",
     light: "فاتح",
-    dark: "مظلم"
+    dark: "مظلم",
+    welcomeDoot: "مرحبًا بك في تطبيق محادثات دووت",
+    msgWelcomeDoot: "يمكنك النقر علي احد المحادثات لبدء المحادثه مع اصدقائك من خلال محادثات دووت"
 }
 
 export default arabicWords
