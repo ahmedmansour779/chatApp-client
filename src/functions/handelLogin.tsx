@@ -25,16 +25,21 @@ export const handelLogin = async ({ e, msgErrorData, EmailNotCorrect, PasswordNo
             email: data.email
         })
         try {
-            const responsePassword: AxiosResponse<responsePasswordInterface> = await axios.post<responsePasswordInterface>(UrlPassword, {
-                userId: responseEmail.data.data._id,
-                password: data.password
+            const responsePassword: AxiosResponse<responsePasswordInterface> = await axios<responsePasswordInterface>({
+                method: 'post',
+                url: UrlPassword,
+                data: {
+                    userId: responseEmail.data.data._id,
+                    password: data.password
+                },
+                withCredentials: true
             })
             toast.success(responsePassword.data.message)
             dispatch(setToken(responsePassword.data.token))
             localStorage.setItem('token', responsePassword.data.token)
             link("/chat")
         } catch {
-            console.log(PasswordNotCorrect);
+            toast.error(PasswordNotCorrect);
         }
     } catch {
         toast.error(EmailNotCorrect)

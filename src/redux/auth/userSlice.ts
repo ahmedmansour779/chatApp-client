@@ -1,5 +1,8 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { WritableDraft } from 'immer';
+import { Socket } from 'socket.io-client';
 import { UserState } from '../../types/userTypes';
+
 
 const initialState: UserState = {
     _id: "",
@@ -9,7 +12,10 @@ const initialState: UserState = {
     token: "",
     onlineUser: [],
     socketConnection: null,
+    chatId: "",
+    searchValue: ""
 };
+
 
 export const userSlice = createSlice({
     name: 'user',
@@ -31,16 +37,24 @@ export const userSlice = createSlice({
             state.profile_pic = "";
             state.token = "";
             state.socketConnection = null;
+            state.chatId = ""
         },
         setOnlineUser: (state, action: PayloadAction<string[]>) => {
             state.onlineUser = action.payload;
         },
-        setSocketConnection: (state, action: PayloadAction<WebSocket | null>) => {
+        setSocketConnection: (state, action: PayloadAction<null | WritableDraft<Socket>>) => {
             state.socketConnection = action.payload;
+        },
+        setChatId: (state, action: PayloadAction<string>) => {
+            state.chatId = action.payload
+        },
+        setSearchValueRedux: (state, action: PayloadAction<string>) => {
+            state.searchValue = action.payload
         },
     },
 });
 
-export const { setUser, setToken, logout, setOnlineUser, setSocketConnection } = userSlice.actions;
+export const { setUser, setToken, logout, setOnlineUser, setChatId, setSearchValueRedux } = userSlice.actions;
+export const setSocketConnection = createAction<Socket>('SET_SOCKET_CONNECTION');
 
 export default userSlice.reducer;

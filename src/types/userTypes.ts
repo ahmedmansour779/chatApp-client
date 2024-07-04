@@ -1,3 +1,5 @@
+import { Socket } from "socket.io-client";
+
 export interface UserState {
     _id: string;
     name: string;
@@ -5,7 +7,9 @@ export interface UserState {
     profile_pic: string;
     token: string;
     onlineUser: string[];
-    socketConnection: WebSocket | null;
+    socketConnection: null | Socket;
+    chatId: string;
+    searchValue: string
 }
 
 export type itemsSidebarType = {

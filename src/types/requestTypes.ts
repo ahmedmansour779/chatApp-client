@@ -21,6 +21,24 @@ export interface responsePasswordInterface {
     token: string
 }
 
+export type dataSearchUsers = {
+    email: string;
+    createdAt: string;
+    name: string;
+    profile_pic: string;
+    updatedAt: string;
+    _id: string;
+    _v: string
+}[]
+
+export interface responseSearchInterface {
+    message: string;
+    data: dataSearchUsers;
+    success: string;
+}
+
+
+
 export interface handelRegisterProps {
     e: React.FormEvent<HTMLFormElement>;
     available: boolean;

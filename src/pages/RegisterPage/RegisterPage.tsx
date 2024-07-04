@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import SideBarLogin from "../../components/SideBarLogin";
 import RegisterForm from "../../components/register/RegisterForm";
+import { fetchUserDetails } from "../../functions/fetchUserDetail";
 import { RootState } from "../../types/translationTypes";
 
 export default function RegisterPage() {
   const lang = useSelector((state: RootState) => state.translation.language)
+  const nav = useNavigate()
+
+  useEffect(() => {
+    const fetchUser = fetchUserDetails();
+    fetchUser.then((response) => {
+      !response.data.logout && nav("/chat")
+    })
+  }, [nav])
 
   return (
     <div

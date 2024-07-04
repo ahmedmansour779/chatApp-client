@@ -1,16 +1,18 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../../../types/translationTypes";
+import ChatUser from "../ChatUser";
 import InitialChatPage from "../InitialChatPage";
 
-interface chatSectionProps {
-  chatId: number
-}
 
-export default function ChatSection({ chatId }: chatSectionProps) {
+export default function ChatSection() {
+  const chatId = useSelector((state: RootState) => state.user.chatId)
+
   return (
     <div className="col-span-8">
       {
-        chatId == 0 ?
+        chatId == "" ?
           <InitialChatPage /> :
-          <p>chat</p>
+          <ChatUser />
       }
     </div>
   );

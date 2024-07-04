@@ -4,9 +4,9 @@ import themeSlice from './theme/themeSlice';
 import translationReducer from './translation/translationSlice';
 
 export default configureStore({
-    reducer: {
-        translation: translationReducer,
-        theme: themeSlice,
-        user: userSlice
-    },
+  reducer: {
+    translation: translationReducer,
+    theme: themeSlice,
+    user: userSlice
+  }
 });
