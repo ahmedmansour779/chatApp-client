@@ -16,7 +16,7 @@ export default function OneUserFromSearch({ name, profile_pic, _v, _id }: OneUse
   const dispatch = useDispatch()
 
   return (
-    <div id={_id} className="flex gap-4 items-center" onClick={(e) => dispatch(setChatId(e.currentTarget.id))}>
+    <div id={_id} className="flex gap-4 items-center hover:cursor-pointer" onClick={(e) => dispatch(setChatId(e.currentTarget.id))}>
       <img src={profile_pic == "" ? userImage : profile_pic} alt={name} className="w-10 h-10 rounded-full" />
       <p className="text-sm">
         {name}

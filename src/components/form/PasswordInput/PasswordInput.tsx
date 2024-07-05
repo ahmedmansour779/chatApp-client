@@ -8,7 +8,7 @@ export default function PasswordInput() {
   const [isValid, setIsValid] = useState(true);
 
   const validatePassword = (password: string) => {
-    const regex = /^[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]*$/;
+    const regex = /^[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':"\\|,.<>/? ]*$/;
     return regex.test(password);
   };
 

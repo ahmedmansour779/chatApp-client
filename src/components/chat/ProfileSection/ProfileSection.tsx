@@ -23,7 +23,7 @@ export default function ProfileSection() {
             {myProfile}
           </p>
         </div>
-        <img src={profile_pic} className="rounded-full w-16 absolute top-24 border-2 border-solid border-light" />
+        <img src={profile_pic} className="rounded-full w-16 h-16 object-cover absolute top-24 border-2 border-solid border-light" />
         <div className="pt-2 pb-4 font-medium">
           <p>{name.toUpperCase()}</p>
         </div>

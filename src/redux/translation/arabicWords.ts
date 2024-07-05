@@ -31,7 +31,10 @@ const arabicWords: words = {
     light: "فاتح",
     dark: "مظلم",
     welcomeDoot: "مرحبًا بك في تطبيق محادثات دووت",
-    msgWelcomeDoot: "يمكنك النقر علي احد المحادثات لبدء المحادثه مع اصدقائك من خلال محادثات دووت"
+    msgWelcomeDoot: "يمكنك النقر علي احد المحادثات لبدء المحادثه مع اصدقائك من خلال محادثات دووت",
+    activeUser: "نشط الان",
+    notActiveUser: "كان نشط منذ قليل",
+    placeHolderMassageInput: "أكتب رسالتك..."
 }
 
 export default arabicWords

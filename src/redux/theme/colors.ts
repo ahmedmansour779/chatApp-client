@@ -8,6 +8,7 @@ export const colors: themeType = {
         backgroundInitialChatPage: "#2e2e2e",
         textInitialChatPage: "#adb5bd",
         descriptionInitialChatPage: "#adb5bdbf",
+        backGroundMassageFiend: "#383838",
     },
     light: {
         backgroundSidebar: "#fff",
@@ -16,5 +17,6 @@ export const colors: themeType = {
         backgroundInitialChatPage: "#f2f2f2",
         textInitialChatPage: "#495057",
         descriptionInitialChatPage: "#495057bf",
+        backGroundMassageFiend: "#fff",
     }
 }

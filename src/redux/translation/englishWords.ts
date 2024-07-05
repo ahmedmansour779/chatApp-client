@@ -31,7 +31,10 @@ const englishWords: words = {
     light: "Light",
     dark: "Dark",
     welcomeDoot: "Welcome to Doot Chat App",
-    msgWelcomeDoot: "You can click on one of the conversations to start a conversation with your friends through Doot conversations"
+    msgWelcomeDoot: "You can click on one of the conversations to start a conversation with your friends through Doot conversations",
+    activeUser: "online",
+    notActiveUser: "offline",
+    placeHolderMassageInput: "type your massage..."
 }
 
 export default englishWords

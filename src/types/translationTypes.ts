@@ -37,7 +37,10 @@ export type words = {
     light: string,
     dark: string,
     welcomeDoot: string,
-    msgWelcomeDoot: string
+    msgWelcomeDoot: string,
+    activeUser: string,
+    notActiveUser: string,
+    placeHolderMassageInput: string
 }
 
 export interface TranslationState {

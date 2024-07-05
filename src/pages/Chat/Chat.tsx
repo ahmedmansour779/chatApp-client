@@ -37,23 +37,7 @@ export default function Chat() {
 
     socketConnection.on("onlineUser", (data) => {
       dispatch(setOnlineUser(data));
-      console.log(data);
     });
-
-    // socketConnection.emit("message-page", chatId);
-    // socketConnection.emit("seen", chatId);
-
-    // socketConnection.on("message-user", (data) => {
-    //   console.log(data);
-    // });
-
-    // socketConnection.on("message", (data) => {
-    //   console.log("message data", data);
-    // });
-
-    // return () => {
-    //   socketConnection.disconnect();
-    // };
   }, [dispatch]);
 
   return (
@@ -64,7 +48,7 @@ export default function Chat() {
       className="grid grid-cols-12"
     >
       <SidebarSection socketConnection={socketConnect} />
-      <ChatSection />
+      <ChatSection socketConnection={socketConnect} />
     </div>
   );
 }

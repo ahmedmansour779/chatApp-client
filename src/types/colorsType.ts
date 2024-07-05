@@ -5,6 +5,7 @@ export type colors = {
     backgroundInitialChatPage: string,
     textInitialChatPage: string,
     descriptionInitialChatPage: string,
+    backGroundMassageFiend: string,
 }
 
 export type themeType = {

@@ -12,7 +12,7 @@ export default function LastOneChat({ image, name, id }: LastOneChatProps) {
   return (
     <div
       id={id} onClick={(e) => dispatch(setChatId(e.currentTarget.id))}
-      className="flex gap-2 items-center text-sm">
+      className="flex gap-2 items-center text-sm hover:cursor-pointer">
       <img
         className="rounded-full w-7 h-7"
         src={image} alt={name} />

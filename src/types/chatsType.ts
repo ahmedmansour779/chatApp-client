@@ -40,3 +40,28 @@ export type conversationType = {
     unseenMsg: number
     _id: string
 }[]
+
+export type userChat = {
+    email: string,
+    name: string,
+    online: boolean,
+    profile_pic: string,
+    _id: string
+}
+
+export type allMassage = {
+    createdAt: string,
+    imageUrl: string
+    msgByUserId: string
+    seen: boolean
+    text: string
+    videoUrl: string
+    __v: string
+    _id: string
+}[]
+
+export type massageSend = {
+    text: string,
+    imageUrl: string,
+    videoUrl: string
+}

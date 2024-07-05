@@ -25,42 +25,14 @@ export default function ChatsSection({ socketConnection }: { socketConnection: S
         setSearchData(response?.data.slice(0, 20));
       })
   }, [searchValue])
-
   useEffect(() => {
     if (socketConnection) {
       socketConnection.emit('sidebar', _id)
-
       socketConnection.on('conversation', (data: conversationType) => {
-        console.log('conversation', data)
-
-        const conversationUserData = data.map((conversationUser) => {
-          if (conversationUser?.sender?._id === conversationUser?.receiver?._id) {
-            return {
-              ...conversationUser,
-              userDetails: conversationUser?.sender
-            }
-          }
-          else if (conversationUser?.receiver?._id !== _id) {
-            return {
-              ...conversationUser,
-              userDetails: conversationUser.receiver
-            }
-          } else {
-            return {
-              ...conversationUser,
-              userDetails: conversationUser.sender
-            }
-          }
-        })
-        setAllUser(conversationUserData)
+        setAllUser(data)
       })
     }
   }, [_id, socketConnection])
-
-
-  console.log(allUser);
-
-
   return (
     <div
       style={{

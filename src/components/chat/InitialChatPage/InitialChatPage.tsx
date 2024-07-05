@@ -11,7 +11,6 @@ export default function InitialChatPage() {
       style={{
         backgroundImage: `url(${backGroundSrc})`,
         backgroundColor: backgroundInitialChatPage,
-
       }}
       className="w-full h-full flex justify-center items-center transition-all ease-in-out delay-300">
       <div className="flex flex-col gap-2 justify-center items-center">

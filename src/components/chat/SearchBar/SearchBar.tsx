@@ -30,7 +30,7 @@ export default function SearchBar({ searchValue, setSearchValue }: searchBarProp
         style={{
           background: backgroundSearchSection
         }}
-        className="text-sm p-1 flex justify-center items-center  transition ease-in-out delay-300">
+        className="text-sm p-1 flex justify-center items-center transition ease-in-out delay-300">
         <IconSearch size={15} className=" transition ease-in-out delay-300" />
       </div>
     </div>
