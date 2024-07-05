@@ -25,7 +25,7 @@ export default function ProfileSection() {
         </div>
         <img src={profile_pic} className="rounded-full w-16 h-16 object-cover absolute top-24 border-2 border-solid border-light" />
         <div className="pt-2 pb-4 font-medium">
-          <p>{name.toUpperCase()}</p>
+          <p>{name}</p>
         </div>
       </div>
       <div className="flex flex-col gap-2 text-xs p-2">
