@@ -39,7 +39,7 @@ export default function ChatsSection({ socketConnection }: { socketConnection: S
         background: backgroundSidebar,
         color: textSidebar
       }}
-      className="col-span-9 w-full h-[100vh] overflow-hidden p-4 transition ease-in-out delay-300 flex flex-col gap-4 ">
+      className="tablet:col-span-9 row-span-11 w-full h-[100vh] overflow-hidden p-4 transition ease-in-out delay-300 flex flex-col gap-4 ">
       <h1 className="font-medium text-2xl">
         {chats}
       </h1>

@@ -13,10 +13,10 @@ interface ItemsSidebar {
 export default function ItemsSidebar({ itemId, setItemId }: ItemsSidebar) {
 
   return (
-    <div className="col-span-3 h-[100vh] bg-backGroundSidebar flex flex-col justify-between items-center py-4 text-iconSidebar">
-      <div className="flex flex-col gap-6 hover:cursor-pointer">
+    <div className="tablet:col-span-3 row-span-1 order-1 tablet:-order-1 tablet:h-[100vh] bg-backGroundSidebar flex tablet:flex-col flex-row tablet:justify-between justify-center gap-4 items-center py-4 text-iconSidebar">
+      <div className="flex tablet:flex-col flex-row gap-6 hover:cursor-pointer">
         <IconMessageFilled color="#4eac6d" title="Doot" />
-        <div className="flex flex-col gap-4">
+        <div className="flex tablet:flex-col flex-row gap-4">
           {
             itemSidebarData.map(({ id, icon, title }) => {
               return (
@@ -32,7 +32,7 @@ export default function ItemsSidebar({ itemId, setItemId }: ItemsSidebar) {
           }
         </div>
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex tablet:flex-col flex-row gap-4">
         <ChangeLanguage />
         <SwitchModeButton />
         <LogoutButton />

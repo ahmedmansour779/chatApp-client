@@ -45,7 +45,7 @@ export default function Chat() {
       style={{
         direction: lang === "ar" ? "rtl" : "ltr",
       }}
-      className="grid grid-cols-12"
+      className="tablet:grid tablet:grid-cols-12 h-lvh"
     >
       <SidebarSection socketConnection={socketConnect} />
       <ChatSection socketConnection={socketConnect} />

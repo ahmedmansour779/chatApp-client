@@ -9,7 +9,8 @@ export default function ChatSection({ socketConnection }: { socketConnection: So
   const chatId = useSelector((state: RootState) => state.user.chatId)
 
   return (
-    <div className="col-span-8">
+    <div
+      className={`tablet:col-span-8 tablet:block ${chatId == "" ? "hidden" : "block"}`}>
       {
         chatId == "" ?
           <InitialChatPage /> :

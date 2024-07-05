@@ -15,7 +15,7 @@ export default function ProfileSection() {
         background: backgroundSidebar,
         color: textSidebar
       }}
-      className="col-span-9 w-full transition ease-in-out delay-300 flex flex-col gap-4 ">
+      className="tablet:col-span-9 row-span-11 w-full transition ease-in-out delay-300 flex flex-col gap-4 ">
       <div className="flex flex-col w-full items-center gap-8 relative border-b-[1px] border-solid border-lightBlack">
         <div className="h-32 relative w-full">
           <img src={profile_pic} className="object-cover h-full w-full" />

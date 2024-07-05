@@ -10,13 +10,14 @@ type InputTextMassageProps = {
 
 export default function InputTextMassage({ setMassage, massage }: InputTextMassageProps) {
   const { placeHolderMassageInput } = useSelector((state: RootState) => state.translation.words)
-  const { backgroundSidebar } = useSelector((state: RootState) => state.theme.colors)
+  const { backgroundSidebar, textSidebar } = useSelector((state: RootState) => state.theme.colors)
 
   return (
     <input
       style={{
         outline: "none",
-        backgroundColor: backgroundSidebar
+        backgroundColor: backgroundSidebar,
+        color: textSidebar
       }}
       onChange={(e) => setMassage({
         ...massage,
