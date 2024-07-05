@@ -28,7 +28,7 @@ export default function Chat() {
   // let socketConnection = null
 
   useEffect(() => {
-    const socketConnection: Socket = io("http://localhost:8080/", {
+    const socketConnection: Socket = io("http://localhost:8080", {
       auth: {
         token: localStorage.getItem("token"),
       },
