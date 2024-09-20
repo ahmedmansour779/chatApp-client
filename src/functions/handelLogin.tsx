@@ -21,6 +21,8 @@ export const handelLogin = async ({ e, msgErrorData, EmailNotCorrect, PasswordNo
     const UrlEmail = `${api}/email`
     const UrlPassword = `${api}/password`
     try {
+        console.log(data);
+
         const responseEmail: AxiosResponse<responseEmailInterface> = await axios.post<responseEmailInterface>(UrlEmail, {
             email: data.email
         })
