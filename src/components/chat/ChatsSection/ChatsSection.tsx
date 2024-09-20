@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Socket } from "socket.io-client";
 import { handleSearchUser } from "../../../functions/searchUserFunction";
+import { useSocket } from "../../../functions/SocketProvider";
 import { conversationType } from "../../../types/chatsType";
 import { dataSearchUsers } from "../../../types/requestTypes";
 import { RootState } from "../../../types/translationTypes";
@@ -9,13 +9,14 @@ import LastOneChat from "../LastOneChat";
 import OneUserFromSearch from "../OneUserFromSearch";
 import SearchBar from "../SearchBar";
 
-export default function ChatsSection({ socketConnection }: { socketConnection: Socket | null }) {
+export default function ChatsSection() {
   const { chats } = useSelector((state: RootState) => state.translation.words)
   const { backgroundSidebar, textSidebar } = useSelector((state: RootState) => state.theme.colors)
   const [searchValue, setSearchValue] = useState<string>("")
   const [searchData, setSearchData] = useState<dataSearchUsers>()
   const { searchValue: searchValueRedux, _id } = useSelector((state: RootState) => state.user)
   const [allUser, setAllUser] = useState<conversationType>([])
+  const socketConnection = useSocket()
 
   useEffect(() => {
     const searchResponse = handleSearchUser({ searchValue })

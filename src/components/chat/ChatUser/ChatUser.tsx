@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Socket } from "socket.io-client";
+import { useSocket } from "../../../functions/SocketProvider";
 import backGroundSrc from "../../../shared/images/background.png";
 import { allMassage, userChat } from "../../../types/chatsType";
 import { RootState } from "../../../types/translationTypes";
@@ -8,11 +8,12 @@ import HeaderChat from "../HeaderChat";
 import InputMassage from "../InputMassage";
 import OneMassage from "../OneMassage";
 
-export default function ChatUser({ socketConnection }: { socketConnection: Socket | null }) {
+export default function ChatUser() {
   const { chatId } = useSelector((state: RootState) => state.user)
   const { backgroundInitialChatPage } = useSelector((state: RootState) => state.theme.colors)
   const [dataUser, setDataUser] = useState<userChat>()
   const [allMassages, setAllMassages] = useState<allMassage>([])
+  const socketConnection = useSocket()
 
   useEffect(() => {
     if (socketConnection) {

@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Socket, io } from "socket.io-client";
 import ChatSection from "../../components/chat/ChatSection";
 import SidebarSection from "../../components/chat/SidebarSection";
 import { fetchUserDetails } from "../../functions/fetchUserDetail";
+import { SocketProvider, useSocket } from "../../functions/SocketProvider";
 import { setOnlineUser, setUser } from "../../redux/auth/userSlice";
 import { RootState } from "../../types/translationTypes";
 
 export default function Chat() {
   const lang = useSelector((state: RootState) => state.translation.language);
-  // const chatId = useSelector((state: RootState) => state.user.chatId);
   const dispatch = useDispatch();
-  const [socketConnect, setSocketConnect] = useState<null | Socket>(null)
+  const socket = useSocket();
 
   useEffect(() => {
     async function fetchData() {
@@ -25,30 +24,31 @@ export default function Chat() {
     fetchData();
   }, [dispatch]);
 
-  // let socketConnection = null
-
   useEffect(() => {
-    const socketConnection: Socket = io("http://localhost:8080", {
-      auth: {
-        token: localStorage.getItem("token"),
-      },
-    });
-    setSocketConnect(socketConnection)
+    if (socket) {
+      socket.on("onlineUser", (data) => {
+        dispatch(setOnlineUser(data));
+      });
+    }
 
-    socketConnection.on("onlineUser", (data) => {
-      dispatch(setOnlineUser(data));
-    });
-  }, [dispatch]);
+    return () => {
+      if (socket) {
+        socket.off("onlineUser");
+      }
+    };
+  }, [socket, dispatch]);
 
   return (
-    <div
-      style={{
-        direction: lang === "ar" ? "rtl" : "ltr",
-      }}
-      className="tablet:grid tablet:grid-cols-12 h-lvh"
-    >
-      <SidebarSection socketConnection={socketConnect} />
-      <ChatSection socketConnection={socketConnect} />
-    </div>
+    <SocketProvider>
+      <div
+        style={{
+          direction: lang === "ar" ? "rtl" : "ltr",
+        }}
+        className="tablet:grid tablet:grid-cols-12 h-lvh"
+      >
+        <SidebarSection />
+        <ChatSection />
+      </div>
+    </SocketProvider>
   );
 }

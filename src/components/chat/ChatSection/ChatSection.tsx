@@ -1,11 +1,10 @@
 import { useSelector } from "react-redux";
-import { Socket } from "socket.io-client";
 import { RootState } from "../../../types/translationTypes";
 import ChatUser from "../ChatUser";
 import InitialChatPage from "../InitialChatPage";
 
 
-export default function ChatSection({ socketConnection }: { socketConnection: Socket | null }) {
+export default function ChatSection() {
   const chatId = useSelector((state: RootState) => state.user.chatId)
 
   return (
@@ -14,7 +13,7 @@ export default function ChatSection({ socketConnection }: { socketConnection: So
       {
         chatId == "" ?
           <InitialChatPage /> :
-          <ChatUser socketConnection={socketConnection} />
+          <ChatUser />
       }
     </div>
   );
