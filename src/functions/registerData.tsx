@@ -1,5 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
+import { api } from "../api";
 import { FormDataObject } from "../types/form";
 import { handelRegisterProps } from "../types/requestTypes";
 
@@ -19,7 +20,7 @@ export const handelRegister = async ({ available, e, value, msgErrorData, alread
     delete data.termsCondition;
     const allDataComplete = Object.values(data).every(val => val !== "");
     if (allDataComplete) {
-        const URL = "http://localhost:8080/api/register"
+        const URL = `${api}/api/register`
         try {
             const response = await axios.post(URL, data)
             console.log("response", response)

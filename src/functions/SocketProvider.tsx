@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { io, Socket } from "socket.io-client";
+import { api } from "../api";
 
 // Create the Socket context
 const SocketContext = createContext<Socket | null>(null);
@@ -11,7 +12,7 @@ export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   const [socket, setSocket] = useState<Socket | null>(null);
 
   useEffect(() => {
-    const socketConnection: Socket = io("http://localhost:8080", {
+    const socketConnection: Socket = io(`${api}/`, {
       auth: {
         token: localStorage.getItem("token"),
       },

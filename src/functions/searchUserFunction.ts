@@ -8,7 +8,7 @@ interface handleSearchUserProps {
 }
 
 export const handleSearchUser = async ({ searchValue }: handleSearchUserProps) => {
-    const URL = `${api}/search-user`
+    const URL = `${api}/api/search-user`
     try {
         const response: AxiosResponse<responseSearchInterface> = await axios.post(URL, {
             search: searchValue
